@@ -8,4 +8,6 @@ services:
     environment:
       - REDIS_PASSWORD=password123
     volumes:
-      - ./redis_data:/bitnami/redis/data
+      - redis_data:/bitnami/redis/data
+volumes:
+  redis_data:
