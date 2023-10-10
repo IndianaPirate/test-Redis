@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  redis:
+    image: redis:7.0.13
+    container_name: redis_db
+    ports:
+      - "6379:6379"
+    environment:
+      - REDIS_PASSWORD=password123
+    volumes:
+      - ./redis_data:/bitnami/redis/data
