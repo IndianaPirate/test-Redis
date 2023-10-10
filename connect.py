@@ -1,6 +1,6 @@
 import redis
 
-pool = redis.ConnectionPool(host='localhost', port=6379, db=0)
+pool = redis.ConnectionPool(host='localhost', port=6379, username="default", password="password123", db=0)
 redis = redis.Redis(connection_pool=pool)
 
 def setValue(name, value):
@@ -10,5 +10,5 @@ def getValue(name):
     value = redis.get(name)
     return value
 
-setValue("name", "Rakoto")
+setValue("name", "Milasoa")
 print("Name: ",getValue("name"))
